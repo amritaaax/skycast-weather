@@ -113,17 +113,18 @@ const transformWeatherData = (
   };
 
   const next7Days = getNextSevenDays();
-  const forecast = res[1].list.map((item, index) => ({
-    day: next7Days[index],
-    temp: {
-      temp_max: kelvinToCelcius(item.temp.max),
-      temp_min: kelvinToCelcius(item.temp.min),
-    },
-    weather: {
-      id: item.weather[0].id,
-      main: item.weather[0].main,
-    },
-  }));
+
+const forecast = res[1].list.slice(0, 7).map((item: any, index: number) => ({
+  day: next7Days[index],
+  temp: {
+    temp_max: kelvinToCelcius(item.main.temp_max),
+    temp_min: kelvinToCelcius(item.main.temp_min),
+  },
+  weather: {
+    id: item.weather[0].id,
+    main: item.weather[0].main,
+  },
+}));
 
   return {
     weather,

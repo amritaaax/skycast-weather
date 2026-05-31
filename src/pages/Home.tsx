@@ -13,10 +13,64 @@ const Home = () => {
   return (
     <>
       {isLoading && <Spinner />}
+
       <Header />
-      <Search />
-      <CurrentWeather />
+
+      <div className="dashboard-layout">
+
+        <div className="left-panel">
+          <Search />
+
+<div className="welcome-card">
+  <h2>🌤️ Welcome to SkyCast</h2>
+
+  <p>
+    Search any city to get real-time weather,
+    temperature, humidity, wind speed and
+    weekly forecasts.
+  </p>
+
+  <div className="welcome-stats">
+    <div>
+      <h3>☀️</h3>
+      <span>Live Weather</span>
+    </div>
+
+    <div>
+      <h3>🌧️</h3>
+      <span>Forecast</span>
+    </div>
+
+    <div>
+      <h3>💨</h3>
+      <span>Wind Info</span>
+    </div>
+  </div>
+</div>
+
+<CurrentWeather />
+        </div>
+
+        <div className="right-panel">
+          <div className="hero-card">
+            <h1>🌤️ SkyCast Pro</h1>
+
+            <p>
+              Beautiful weather forecasts,
+              real-time updates and
+              location insights.
+            </p>
+
+            <button className="hero-btn">
+              Explore Weather
+            </button>
+          </div>
+        </div>
+
+      </div>
+
       <Forecast />
+
       <Footer />
     </>
   );

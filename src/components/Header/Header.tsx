@@ -7,7 +7,8 @@ const Header: React.FC = () => {
 
   return (
     <header className="rw-header">
-      <h1 className="rw-title">React Weather</h1>
+      <h1 className="rw-title">🌦️ SkyCast Weather</h1>
+
       <div className="rw-header-icons">
         <button
           className="rw-dark-mode-button"
@@ -18,7 +19,13 @@ const Header: React.FC = () => {
         >
           <span className="rw-dark-mode-thumb" />
         </button>
-        <a className="rw-github-link" href="http://www.github.com/esnz/react-weather-app">
+
+        <a
+          className="rw-github-link"
+          href="https://github.com/amritaaax"
+          target="_blank"
+          rel="noreferrer"
+        >
           <GithubIcon />
         </a>
       </div>

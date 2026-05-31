@@ -4,7 +4,14 @@ const Footer: React.FC = () => {
   return (
     <footer className="rw-footer">
       <p>
-        Developed By <a href="https://www.ehsanazizi.me">Ehsan Azizi</a>
+        Developed By{' '}
+        <a
+          href="https://github.com/amritaaax"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Amrita Thakur
+        </a>
       </p>
     </footer>
   );
